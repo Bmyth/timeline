@@ -1,0 +1,71 @@
+#container{
+  width: 842px; 
+  margin: 0 auto;
+}
+
+#timeline_container{
+  position: absolute; 
+  left: 422px; 
+  width: 6px; 
+  background-color: #ccc; 
+  height: 100%
+}
+
+.item{
+  float: left; 
+  width: 400px; 
+  border: 1px solid #aaa; 
+  margin: 30px 0px;
+  padding: 2px;
+}
+
+.item.right{ margin-left: 38px;}
+
+.left-arrow{background: url(img/left.png) no-repeat; width: 40px; height: 13px; position: relative; right: -402px; top: -36px;}
+.right-arrow{background: url(img/right.png) no-repeat; width: 40px; height: 13px; position: relative; left: -25px; top: -36px;}
+
+#timeline-navigator{
+  position: fixed; 
+  left: 10px; 
+  top: 10px; 
+  width: 8px;
+}
+
+.time-sec{
+  height: 36px; 
+  color: black; 
+  width: 20px; 
+  margin-top: 3px; 
+  display: block; 
+  padding-left: 6px; 
+  font-weight: bold; 
+  text-decoration: none;
+}
+
+#title {
+  width: 842px;
+  margin: 0 auto;
+  text-align: center; 
+  color: #336699; 
+  font-size: 48px; 
+  font-weight: bold; 
+  border: solid #369 2px; 
+  background-color: white; 
+}
+
+.item img.thumb-nail {
+  float: left;
+  max-width: 80px;
+  max-height: 80px;
+  margin: 5px;
+}
+
+.item h2, .item h4{
+  line-height: 7px;
+  text-align: right;
+  padding-right: 10px; 
+}
+
+.item p{
+  padding: 0 10px;
+}
