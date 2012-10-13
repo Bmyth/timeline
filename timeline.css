@@ -14,7 +14,7 @@
 .item{
   float: left; 
   width: 400px; 
-  border: 1px solid #aaa; 
+  border: 1px solid #bbb; 
   margin: 30px 0px;
   padding: 2px;
 }
@@ -53,14 +53,33 @@
   background-color: white; 
 }
 
+.item img{float: left;}
+
 .item img.thumb-nail {
-  float: left;
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 100px;
+  max-height: 100px;
   margin: 5px;
 }
 
-.item h2, .item h4{
+.item img.big{
+  width: 380px;
+  height: 290px;
+  margin: 10px;
+}
+
+.item img.big-v{
+  width: 380px;
+  height: 480px;
+  margin: 10px;
+}
+
+.item img.small{
+  width: 178px;
+  height: 133px;
+  margin: 10px;
+}
+
+.item h2, .item h3, .item h4{
   line-height: 7px;
   text-align: right;
   padding-right: 10px; 

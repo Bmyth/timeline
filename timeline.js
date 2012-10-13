@@ -35,7 +35,7 @@ var render_navigator = function(){
     $(".item").each(function(){
       if($(this).attr('value') == date){
         $(this).goTo();
-        return;
+        return false;
       }
     })
   })
@@ -78,6 +78,7 @@ var markNearest = function(){
 
   if(nearest !== null){
     var date = $(nearest).attr('value');
+    alert(date);
     $("a.time-sec").each(function(){
       if(date == $(this).text()){
         $(this).css('border-left','solid #369 5px');
