@@ -55,21 +55,11 @@ var markRight = function(){
 var markNearest = function(){
   resetElement();
 
-  var scrollPosition = document.documentElement.scrollTop;
-  var scrollHeight = document.documentElement.scrollHeight
-
-  var minDistance = scrollHeight;
+  var minDistance = document.documentElement.scrollHeight;
   var nearest = null;
 
   $(".item").each(function(){
-    var actualTop = this.offsetTop;
-    var current = this.offsetParent;
-　　　　while(current !== null){
-　　　　　　actualTop += current.offsetTop;
-　　　　　　current = current.offsetParent;
-　　　　}
-
-    var dis = actualTop - scrollPosition + this.clientHeight/3;
+    var dis = this.getBoundingClientRect().top;
     if(dis >= 0 && dis < minDistance){
        minDistance = dis;
        nearest = this;
@@ -78,7 +68,6 @@ var markNearest = function(){
 
   if(nearest !== null){
     var date = $(nearest).attr('value');
-    alert(date);
     $("a.time-sec").each(function(){
       if(date == $(this).text()){
         $(this).css('border-left','solid #369 5px');
